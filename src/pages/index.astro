@@ -1,7 +1,26 @@
 ---
 import Layout from "../layouts/BaseLayout.astro";
-import Navbar from "../components/Navbar.astro";
+import Navbar from "../components/Navbar";
+import LinkButton from "../components/LinkButton.astro";
+import IconLink from "../components/IconLink.astro";
 ---
 <Layout title="Eilay Katsnelson">
     <Navbar />
+    <!--hero-->
+    <section class="h-[50vh] pt-10">
+        <h1 class="block text-6xl my-4">Eilay Katsnelson</h1>
+        <!--TODO: make this text animate in-->
+        <div class="bg-surface p-2 w-3/4 shadow-xl">
+            <p>> Computer Science student at the University of Ottawa.</p>
+        </div>
+        <div class="w-full flex gap-4 justify-between mt-6">
+            <div class="flex gap-4">
+                <LinkButton href="#" text="CV" />
+            </div>
+            <div class="flex gap-4">
+                <IconLink href="#" iconName="linkedin" />
+                <IconLink href="#" iconName="github" />
+            </div>
+        </div>
+    </section>
 </Layout>
