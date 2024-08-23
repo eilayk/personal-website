@@ -1,0 +1,21 @@
+---
+import Pill from './Pill.astro';
+
+interface Props {
+    title: string;
+    img?: any;
+    skills?: string[];
+}
+
+const { title, img, skills } = Astro.props;
+---
+
+<div class="p-5 shadow-2xl flex flex-col w-96 gap-2">
+    <h3 class="text-3xl">{title}</h3>
+    <div class="flex gap-1">
+        {skills?.map((skill, index) => <Pill key={index}>{skill}</Pill>)}
+    </div>
+    <p>
+        <slot />
+    </p>
+</div>
