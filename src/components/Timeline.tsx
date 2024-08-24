@@ -1,6 +1,6 @@
 // adapted from https://preline.co/docs/timeline.html
 
-import type {TimelineItemProps} from "../types/TimelineItemProps.tsx";
+import type {TimelineItemProps} from "../types/TimelineItemProps.ts";
 
 interface TimelineProps {
     items: TimelineItemProps[];
