@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/BaseLayout.astro";
 import Navbar from "../components/Navbar";
-import LinkButton from "../components/LinkButton.astro";
+import LinkButton from "../components/LinkButton";
 import IconLink from "../components/IconLink.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 import Timeline from "../components/Timeline";
@@ -32,7 +32,7 @@ const timeLineItems: TimelineItemProps[] = [
         </div>
         <div class="w-full flex gap-4 justify-between mt-6">
             <div class="flex gap-4">
-                <LinkButton href="#" text="CV" />
+                <LinkButton href="eilay_katsnelson_resume_2024.pdf" text="CV" attrs={{download: true}} />
             </div>
             <div class="flex gap-4">
                 <IconLink href="https://www.linkedin.com/in/eilayk/" iconName="linkedin" />
