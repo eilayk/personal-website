@@ -4,11 +4,27 @@ import Navbar from "../components/Navbar";
 import LinkButton from "../components/LinkButton.astro";
 import IconLink from "../components/IconLink.astro";
 import ProjectCard from "../components/ProjectCard.astro";
+import Timeline from "../components/Timeline";
+import {type TimelineItemProps} from "../types/TimelineItemProps";
+
+const timeLineItems: TimelineItemProps[] = [
+    {
+        dateRange: "May 2024 - August 2024",
+        title: "QTS Software Development Intern",
+        company: "RBC Capital Markets"
+    },
+    {
+        dateRange: "May 2023 - August 2023",
+        title: "QTS Software Development Intern",
+        company: "RBC Capital Markets",
+    },
+]
+
 ---
 <Layout title="Eilay Katsnelson">
     <Navbar />
-    <!--hero-->
-    <section class="pt-10">
+    <!--home-->
+    <section class="pt-10" id="home">
         <h1 class="block text-6xl my-4">Eilay Katsnelson</h1>
         <!--TODO: make this text animate in-->
         <div class="bg-surface p-2 w-3/4 shadow-xl">
@@ -19,34 +35,42 @@ import ProjectCard from "../components/ProjectCard.astro";
                 <LinkButton href="#" text="CV" />
             </div>
             <div class="flex gap-4">
-                <IconLink href="#" iconName="linkedin" />
-                <IconLink href="#" iconName="github" />
+                <IconLink href="https://www.linkedin.com/in/eilayk/" iconName="linkedin" />
+                <IconLink href="https://github.com/eilayk"  iconName="github" />
             </div>
         </div>
     </section>
     <!--linebreak-->
     <hr class="my-10" />
     <!--Projects-->
-    <section class="">
+    <section id="projects">
         <h2 class="text-5xl">Projects</h2>
         <div class="flex flex-wrap flex-row gap-y-5">
-            <ProjectCard title="smartGO-API" skills={["Rust", "Axum"]}>
+            <ProjectCard title="smartGO-API" skills={["Rust", "Axum"]} href="https://github.com/eilayk/smartgo">
                 REST API for Metrolinx's GO Trains.
                 Shows real-time departure times including
                 scheduled departure times, delays, train length, platform, and more.
             </ProjectCard>
-            <ProjectCard title="smartGO-app" skills={["React Native"]}>
+            <ProjectCard title="smartGO-app" skills={["React Native"]} href="https://github.com/eilayk/smartgo-app">
                 Mobile app for iOS and Android devices. Consumes smartGO-API to show
                 real-time departure times for Metrolinx GO trains.
             </ProjectCard>
-            <ProjectCard title="P2P-FileShare" skills={["React", "WebRTC"]}>
+            <ProjectCard title="P2P-FileShare" skills={["React", "WebRTC"]} href="https://github.com/Columbium41/P2P-File-Share">
                 Peer-to-peer file sharing web app created for Hack The Hill hackathon.
             </ProjectCard>
-            <ProjectCard title="uOttawaRMP" skills={["NodeJS", "WebExtensions"]}>
+            <ProjectCard title="uOttawaRMP" skills={["NodeJS", "WebExtensions"]} href="https://github.com/eilayk/uOttawaRMP">
                 Cross-browser extension that injects RateMyProf data into the
                 course selection portal for uOttawa students.
             </ProjectCard>
         </div>
     </section>
-
+    <!--linebreak-->
+    <hr class="my-10" />
+    <!--Experience-->
+    <section id="exp">
+        <h2 class="text-5xl">Experience</h2>
+        <div class="mt-5 flex justify-center items-center">
+            <Timeline items={timeLineItems}/>
+        </div>
+    </section>
 </Layout>

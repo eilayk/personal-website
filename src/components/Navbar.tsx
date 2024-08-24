@@ -10,13 +10,13 @@ const NavItem = (props: NavItemProps) => {
 
 const Navbar = () => (
     <nav>
-        <div className="flex justify-end">
+        <div className="flex justify-end w-100">
             {/*TODO: show this only when scrolling down*/}
             {/*<span class="text-2xl">Eilay Katsnelson</span>*/}
             <ul className="flex space-x-4">
-                <NavItem href='#' text='Home' />
-                <NavItem href='#' text='Projects' />
-                <NavItem href='#' text='Experience' />
+                <NavItem href='#home' text='Home' />
+                <NavItem href='#projects' text='Projects' />
+                <NavItem href='#exp' text='Experience' />
             </ul>
         </div>
     </nav>
