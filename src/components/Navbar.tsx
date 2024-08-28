@@ -9,7 +9,7 @@ const NavItem = (props: NavItemProps) => {
 }
 
 const Navbar = () => (
-    <nav>
+    <nav className="sticky top-0 bg-bg py-4 px-2">
         <div className="flex justify-end w-100">
             {/*TODO: show this only when scrolling down*/}
             {/*<span class="text-2xl">Eilay Katsnelson</span>*/}

@@ -10,7 +10,7 @@ interface Props {
 const { title, skills, href } = Astro.props;
 ---
 <a href={href} target="_blank">
-    <div class="p-5 shadow flex flex-col w-96 gap-2 hover:shadow-2xl h-56">
+    <div class="p-5 shadow flex flex-col w-96 gap-2 hover:shadow-2xl hover:shadow-surface h-56">
         <h3 class="text-3xl">{title}</h3>
         <div class="flex gap-1">
             {skills?.map((skill, index) => <Pill key={index}>{skill}</Pill>)}
