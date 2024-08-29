@@ -4,15 +4,15 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				"bg": "#1a1a1a",
-				"bg-hover": "#333333",
-				"primary": "#f0f0f0",
-				"secondary": "#ff6b6b",
-				"accent": "#ff6b6b",
-				"accent-hover": "#ff4f4f",
-				"accent-pressed": "#ff3333",
-				"surface": "#333333",
-				"text": "#f0f0f0",
+				"bg": "var(--color-bg)",
+				"bg-hover": "var(--color-bg-hover)",
+				"primary": "var(--color-primary)",
+				"secondary": "var(--color-secondary)",
+				"accent": "var(--color-accent)",
+				"accent-hover": "var(--color-accent-hover)",
+				"accent-pressed": "var(--color-accent-pressed)",
+				"surface": "var(--color-surface)",
+				"text": "var(--color-text)",
 			},
 			fontFamily: {
 				"sans": "monospace",

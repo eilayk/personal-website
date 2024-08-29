@@ -22,7 +22,7 @@ const timeLineItems: TimelineItemProps[] = [
 
 ---
 <Layout title="Eilay Katsnelson">
-    <Navbar />
+    <Navbar client:load />
     <!--home-->
     <section class="pt-10" id="home">
         <h1 class="block text-6xl my-4">Eilay Katsnelson</h1>
@@ -45,7 +45,7 @@ const timeLineItems: TimelineItemProps[] = [
     <!--Projects-->
     <section id="projects">
         <h2 class="text-5xl">Projects</h2>
-        <div class="flex flex-wrap flex-row gap-y-5">
+        <div class="flex flex-wrap flex-row gap-y-5 mt-4">
             <ProjectCard title="smartGO-API" skills={["Rust", "Axum"]} href="https://github.com/eilayk/smartgo">
                 REST API for Metrolinx's GO Trains.
                 Shows real-time departure times including
