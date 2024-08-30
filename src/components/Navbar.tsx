@@ -1,22 +1,21 @@
-import React from "react";
-import {themeStore} from "../stores.ts";
-import {useStore} from "@nanostores/react";
-import sunIcon from '../icons/sun.svg';
-import moonIcon from '../icons/moon.svg';
+import React, {useState} from "react";
+import type {Theme} from "../types/Theme.ts";
+import MoonIcon from "../icons/moonIcon.tsx";
+import SunIcon from "../icons/sunIcon.tsx";
 
 
 const ThemeSwitch = () => {
-    const theme = useStore(themeStore);
+    const [theme, setTheme] = useState<Theme>('dark');
     const toggleTheme = () => {
-        document.body.classList.toggle('light');
-        themeStore.set(theme === 'light' ? 'dark' : 'light');
+        theme === 'dark' ? setTheme('light') : setTheme('dark');
+        document.documentElement.classList.toggle('light');
     }
 
     return (
         <button className='hover:bg-bg-hover px-4 py-2' onClick={toggleTheme}>
-            {theme === 'dark' ?
-                <img src={sunIcon.src} alt='sun'/> :
-                <img src={moonIcon.src} alt='moon'/>
+            {theme === 'light' ?
+                <MoonIcon className='size-6' /> :
+                <SunIcon className='size-6' />
             }
         </button>
     );
