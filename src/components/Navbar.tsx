@@ -1,5 +1,5 @@
-import React, {useState} from "react";
-import type {Theme} from "../types/Theme.ts";
+import { useState } from "react";
+import type { Theme } from "../types/Theme.ts";
 import MoonIcon from "../icons/moonIcon.tsx";
 import SunIcon from "../icons/sunIcon.tsx";
 

@@ -11,7 +11,7 @@ const Timeline = (props: TimelineProps) => {
 
     return (
         <div>
-            {items.map((item, index) => TimelineItem(item))}
+            {items.map((item) => TimelineItem(item))}
         </div>
     )
 }
