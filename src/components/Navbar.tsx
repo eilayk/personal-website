@@ -28,7 +28,7 @@ interface NavItemProps {
 
 const NavItem = (props: NavItemProps) => {
     const { href, text } = props;
-    return <li><a className="hover:bg-bg-hover px-4 py-2" href={href}>{text}</a></li>
+    return <li className='flex justify-center items-center'><a className="hover:bg-bg-hover px-4 py-2" href={href}>{text}</a></li>
 }
 
 const Navbar = () => (
