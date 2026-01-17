@@ -1,7 +1,6 @@
 ---
 import Layout from "../layouts/BaseLayout.astro";
 import Navbar from "../components/Navbar";
-import LinkButton from "../components/LinkButton";
 import IconLink from "../components/IconLink.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 import Timeline from "../components/Timeline";
@@ -9,7 +8,12 @@ import {type TimelineItemProps} from "../types/TimelineItemProps";
 
 const timeLineItems: TimelineItemProps[] = [
     {
-        dateRange: "September 2025 - Present",
+        dateRange: "January 2026 - Present",
+        title: "Software Development Intern (Part Time)",
+        company: "Ouster"
+    }, 
+    {
+        dateRange: "September 2025 - December 2025",
         title: "Software Development Intern",
         company: "Ouster"
     }, 
@@ -61,7 +65,7 @@ const timeLineItems: TimelineItemProps[] = [
     <section id="projects">
         <h2 class="text-5xl">Projects</h2>
         <div class="flex flex-wrap flex-row gap-y-5 mt-4">
-            <ProjectCard title="Chip-8 Emulator" skills={["Rust", "React"]} href="https://github.com/eilayk/chip-8-emulator">
+            <ProjectCard title="Chip-8 Emulator" skills={["Rust", "React"]} href="https://github.com/eilayk/chip-8-emulator" link="https://chip8.eilayk.com">
                 Chip-8 emulator built in Rust. Works on the web using WebAssembly.
             </ProjectCard>
             <ProjectCard title="uOttawaRMP" skills={["NodeJS", "WebExtensions"]} href="https://github.com/eilayk/uOttawaRMP">
@@ -73,8 +77,8 @@ const timeLineItems: TimelineItemProps[] = [
                 Shows real-time departure times including
                 scheduled departure times, delays, train length, platform, and more.
             </ProjectCard>
-            <ProjectCard title="smartGO-app" skills={["React Native"]} href="https://github.com/eilayk/smartgo-app">
-                Mobile app for iOS and Android devices. Consumes smartGO-API to show
+            <ProjectCard title="smartGO-ui" skills={["React", "Next.JS"]} href="https://github.com/eilayk/smartgo-ui" link="https://smartgo.eilayk.com">
+                Web app that consumes smartGO-API to show
                 real-time departure times for Metrolinx GO trains.
             </ProjectCard>
             <ProjectCard title="P2P-FileShare" skills={["React", "WebRTC"]} href="https://github.com/Columbium41/P2P-File-Share">

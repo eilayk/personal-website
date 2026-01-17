@@ -1,22 +1,36 @@
 ---
 import Pill from './Pill.astro';
+import { Icon } from 'astro-icon/components';
 
 interface Props {
     title: string;
     skills?: string[];
     href: string;
+    link?: string;
 }
 
-const { title, skills, href } = Astro.props;
+const { title, skills, href, link } = Astro.props;
 ---
-<a href={href} target="_blank">
-    <div class="p-5 shadow flex flex-col w-96 gap-2 hover:shadow-2xl hover:shadow-surface h-56">
-        <h3 class="text-3xl">{title}</h3>
-        <div class="flex gap-1">
-            {skills?.map((skill, index) => <Pill key={index}>{skill}</Pill>)}
-        </div>
-        <p>
+<div class="p-5 shadow flex flex-col w-96 gap-2 hover:shadow-2xl hover:shadow-surface h-64 transition-shadow border border-transparent hover:border-surface">
+    <h3 class="text-3xl">{title}</h3>
+    <div class="flex gap-1 flex-wrap">
+        {skills?.map((skill, index) => <Pill key={index}>{skill}</Pill>)}
+    </div>
+    <div class="flex-grow">
+        <p class="text-sm">
             <slot />
         </p>
     </div>
-</a>
+    <div class="flex gap-4 mt-auto">
+        <a href={href} target="_blank" class="flex items-center gap-1 hover:text-accent transition-colors" title="View Source">
+            <Icon name="github" size={24} />
+            <span class="text-sm">Source</span>
+        </a>
+        {link && (
+            <a href={link} target="_blank" class="flex items-center gap-1 hover:text-accent transition-colors" title="View Live Demo">
+                <Icon name="external-link" size={24} />
+                <span class="text-sm">Demo</span>
+            </a>
+        )}
+    </div>
+</div>
