@@ -1,4 +1,6 @@
-:root {
+@import "tailwindcss";
+
+@theme {
     --color-bg: #1a1a1a;
     --color-bg-hover: #333333;
     --color-primary: #f0f0f0;
@@ -8,6 +10,7 @@
     --color-accent-pressed: #ff3333;
     --color-surface: #333333;
     --color-text: #f0f0f0;
+    --font-sans: monospace;
 }
 
 .light {
