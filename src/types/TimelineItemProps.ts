@@ -1,5 +1,6 @@
 export interface TimelineItemProps {
-    dateRange: string;
-    title: string;
-    company: string;
+  dateRange: string;
+  title: string;
+  company: string;
+  type?: string;
 }
