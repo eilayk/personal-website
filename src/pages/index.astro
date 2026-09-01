@@ -8,7 +8,12 @@ import {type TimelineItemProps} from "../types/TimelineItemProps";
 
 const timeLineItems: TimelineItemProps[] = [
     {
-        dateRange: "January 2026 - Present",
+        dateRange: "May 2026 - August 2026",
+        title: "Software Development Intern",
+        company: "Ouster"
+    }, 
+    {
+        dateRange: "January 2026 - April 2026",
         title: "Software Development Intern (Part Time)",
         company: "Ouster"
     }, 
@@ -65,6 +70,9 @@ const timeLineItems: TimelineItemProps[] = [
     <section id="projects">
         <h2 class="text-5xl">Projects</h2>
         <div class="flex flex-wrap flex-row gap-y-5 mt-4">
+            <ProjectCard title="V2X-Viz" skills={["Rust", "egui"]} href="https://github.com/eilayk/v2x-viz">
+              V2X message visualizer. Draws vehicles on a map based on broadcasted v2x messages.
+            </ProjectCard>
             <ProjectCard title="Chip-8 Emulator" skills={["Rust", "React"]} href="https://github.com/eilayk/chip-8-emulator" link="https://chip8.eilayk.com">
                 Chip-8 emulator built in Rust. Works on the web using WebAssembly.
             </ProjectCard>
